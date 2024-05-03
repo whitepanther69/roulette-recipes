@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+  <title>White Panther</title>
+  <meta content="" name="description" />
+  <meta content="" name="keywords" />
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon" />
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Jost:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet" />
+
+
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet" />
+  <link href="assets/css/bs.css" rel="stylesheet" />
+  <link href="assets/css/bsmin.css" rel="stylesheet" />
+
+  <link href="assets/css/footer.css" rel="stylesheet" />
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+
+  <!-- Jquery CDN link -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <style>
+    /* Custom styles */
+    .recipe-card {
+      cursor: pointer;
+    }
+
+    .recipe-card img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+      <img src="assets/img/panther.png" width="100" height="100" alt="">
+
+      <h1 class="logo me-auto"><a href="index.html">White Panther</a></h1>
+
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+          <li><a class="nav-link scrollto" href="about.html">About Us</a></li>
+          <li><a class="nav-link scrollto active" href="blog.html">Blog</a></li>
+          <li><a class="nav-link scrollto" href="contact.html">Contact</a></li>
+          <li><a class="getstarted scrollto active" href="search.html">Search</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav>
+      <!-- .navbar -->
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+          data-aos="fade-up" data-aos-delay="200">
+
+          <h4 class="yellow bold">Blog</h4>
+          <p class="yellow">Savoring Homemade Bread: Dive into the world of homemade bread - the aroma, the texture, the
+            taste. Join us as we discover the simple joy of baking bread at home.</p>
+
+          <br>
+          <h4 class="yellow bold">Blog</h4>
+          <p class="yellow">The Slow Cooker's Charm: Explore the magic of slow cooking - tender meats, hearty stews, and
+            flavors that deepen with time. Embrace the art of unhurried cooking and savor every moment. </p>
+
+          <br>
+          <h4 class="yellow bold">Blog</h4>
+          <p class="yellow">Global Gastronomy (A Flavorful Journey): Embark on a culinary adventure through exotic
+            flavors from around the globe. From spicy street food to aromatic spices, let's explore the rich tapestry of
+            global cuisine together.</p>
+
+        </div>
+        <div class="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
+          <img id="rotateImage" src="assets/img/blog.jpeg" class="img-fluid animated spin" alt="" />
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero -->
+
+
+
+
+  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="mealTitle"></h5>
+          <button type="button" id="closeModalBtn" class="close" onclick="stopSpinning()" data-dismiss="modal"
+            aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <img id="mealImage" src="" class="img-fluid animated" alt="" />
+
+          <h4 id="mealDescription"></h4>
+        </div>
+        <div class="modal-footer">
+          <!-- <button type="button" id="closeModalBtn" class="btn btn-secondary" onclick="stopSpinning()" data-dismiss="modal" >Close</button> -->
+          <!-- Add this line to the "Link to Preparation" button in your modal -->
+          <a id="visitSiteBtnModal" class="btn btn-warning" target="_blank" href="">Link to Preparation</a>
+
+          <button type="button" class="btn btn-primary" onclick="shareToFacebook()"><i
+              class="bi bi-facebook"></i>Share</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div id="bannerContainer">
+    <img class="banner-image" src="assets/img/banner/1.jpg" alt="food and drinks banner">
+  </div>
+
+  <section>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d35766.63036835521!2d-3.3649252513672034!3d55.9248537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4887c42618b5811f%3A0x844e539eeba7f1a4!2sEdinburgh%20Napier%20University!5e0!3m2!1sen!2sng!4v1714285116610!5m2!1sen!2sng"
+      width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+  <footer class="pl-5">
+    <div class="footer-container">
+      <div class="footer-section">
+        <h2>About Us</h2>
+        <p>White Panther Recipe Roulette" is a dynamic and interactive platform designed to revolutionize the way people
+          discover and explore new recipes.</p>
+      </div>
+      <div class="footer-section">
+        <h2>Contact Us</h2>
+        <p>Email: info@whitepanther.io<br>Phone: +44 816 286 1599</p>
+      </div>
+      <div class="footer-section">
+        <h2>Follow Us</h2>
+        <ul class="social-links">
+          <li><a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+          <li><a href="https://twitter.com"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://instagram.com"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>&copy; 2024 Black Panther. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+
+  <script>
+    // JavaScript to change the image source after a delay
+    const images = ['assets/img/banner/1.jpg', 'assets/img/banner/2.jpg', 'assets/img/banner/3.jpg', 'assets/img/banner/4.jpg'];
+    let currentImageIndex = 0;
+    const bannerContainer = document.getElementById('bannerContainer');
+
+    function changeImage() {
+      currentImageIndex = (currentImageIndex + 1) % images.length;
+      bannerContainer.innerHTML = `<img class="banner-image" src="${images[currentImageIndex]}" alt="food and drinks banner">`;
+    }
+
+    setInterval(changeImage, 2000); // Change every 2 seconds (2000 milliseconds)
+  </script>
+
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <script src="assets/js/env.js"></script>
+  <!-- Api Spoonacular -->
+
+  <script src="assets/js/mealdetails.js"></script>
+  <script src="assets/js/randomrecipe.js"></script>
+  <script src="assets/js/spin.js"></script>
+
+
+  <script src="assets/js/facebookshare.js"></script>
+  <script src="assets/js/bookmarkMeal.js"></script>
+
+
+  <!-- After including jQuery -->
+  <script>
+    $(document).ready(function () {
+      // Attach event listener to the Close button
+      $('#closeModalBtn').on('click', function () {
+        $('#exampleModalCenter').modal('hide'); // Hide the modal when the Close button is clicked
+      });
+    });
+  </script>
+
+  <script>
+    function stopSpinning() {
+      var image = document.getElementById("rotateImage");
+      image.style.animation = ""; // Remove animation
+    }
+  </script>
+
+
+
+  <script src="assets/js/featuredRecipe.js"></script>
+  <script src="assets/js/similarRecipe.js"></script>
+  <script src="assets/js/information.js"></script>
+  <script src="assets/js/mealOfTheDay.js"></script>
+
+
+</body>
+
+</html>
